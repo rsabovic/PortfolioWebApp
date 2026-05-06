@@ -1,0 +1,143 @@
+body {
+  background-color: AntiqueWhite;
+  color: saddlebrown;
+  display: flex;
+  font-family: "Pixelify Sans";
+  font-size: 30px;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.appContainer {
+  display: flex;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingDiv {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.landingDiv h1 {
+  font-size: 75px;
+  margin: 0;
+}
+
+.landingDiv p {
+  font-size: 25px;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.experienceDiv {
+  padding-top: 25px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceDiv h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.experienceDiv h2 {
+  font-size: 35px;
+  margin: 0;
+}
+
+.experienceDiv p,
+.experienceDiv a {
+  font-size: 25px;
+  line-height: 0.8;
+  margin: 0;
+}
+
+.contactDiv {
+  width: 600px;
+  border: 10px solid black;
+  border-radius: 8px;
+  padding: 25px;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactDiv h1 {
+  font-size: 75px;
+  margin: 0;
+}
+
+.blogDiv {
+  width: 1500px;
+  border: 10px solid black;
+  border-radius: 60px;
+  padding: 25px;
+  background-color: wheat;
+}
+
+.blogPostDiv {
+  margin-top: 30px;
+  width: 1300px;
+  border: 5px solid black;
+  border-radius: 60px;
+  padding: 25px;
+  background-color: wheat;
+}
+
+.blogPostDiv h1 {
+  font-size: 50px;
+}
+
+.blogPostDiv p {
+  font-size: 25px;
+}
+
+.directory {
+  justify-content: space-evenly;
+  width: 200px;
+  background: wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  padding: 10px;
+  gap: 8px;
+}
+
+.directory a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: saddlebrown;
+  padding: 8px;
+  font-size: 24px;
+}
+
+.directory a.active {
+  color: chocolate;
+}
+
+.directory a i {
+  font-size: 20px;
+}
+
+.directory a:hover {
+  color: chocolate;
+}
