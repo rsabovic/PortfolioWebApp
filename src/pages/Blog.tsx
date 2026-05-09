@@ -1,3 +1,6 @@
+import blogPosts from '../data/BlogPosts'
+import { Link } from 'react-router-dom'
+
 function Blog() {
     return (
         <div className="main">
@@ -11,14 +14,13 @@ function Blog() {
                     knowledge I learned. Once again thank you, and I hope you enjoy!
                 </p>
             </div>
-            <div className="blogPostDiv">
-                <h1>First Post</h1>
-                <p>Just a little summary of what I speak about.</p>
+            {blogPosts.map((post) => (
+                <div className="blogPostDiv" key={post.id}>
+                <h1><Link to={`/blog/${post.id}`}>{post.title}</Link></h1>
+                <p>{post.summary}</p>
+                <p>{post.date}</p>
             </div>
-            <div className="blogPostDiv">
-                <h1>Second Post</h1>
-                <p>Some more words.</p>
-            </div>
+            ))}
         </div>
     )
 }

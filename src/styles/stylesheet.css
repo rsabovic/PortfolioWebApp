@@ -77,6 +77,12 @@ body {
   flex-direction: column;
 }
 
+.contactDiv textarea, input, button {
+  font-family: "Pixelify Sans";
+  background-color: antiquewhite;
+  border-radius: 8px;
+}
+
 .contactDiv h1 {
   font-size: 75px;
   margin: 0;
@@ -105,6 +111,14 @@ body {
 
 .blogPostDiv p {
   font-size: 25px;
+}
+
+.blogPostDiv a{
+  color: saddlebrown;
+}
+
+.blogPostDiv a:visited {
+  color: maroon;
 }
 
 .directory {
