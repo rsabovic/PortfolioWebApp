@@ -103,6 +103,7 @@ body {
   border-radius: 60px;
   padding: 25px;
   background-color: wheat;
+  white-space: pre-wrap;
 }
 
 .blogPostDiv h1 {
