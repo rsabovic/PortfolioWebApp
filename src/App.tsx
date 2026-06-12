@@ -8,11 +8,14 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import LogIn from './pages/LogIn'
 import Directory from './components/Directory'
+import ThemeSwitcher from './components/ThemeSwitcher'
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="appContainer">
+
+        <ThemeSwitcher />  {/* ← now it's available everywhere */}
+        <div style={{ display: 'flex', width: '100%' }}>
 
         <Routes>
           <Route path="/logIn" element={<LogIn />} />

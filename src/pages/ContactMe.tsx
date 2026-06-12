@@ -18,19 +18,24 @@ function ContactMe() {
     }
     return (
         <div className="main">
-            <div className="contactDiv">
+            <div className="contactDiv standardCard">
                 <h1>Let's chat! </h1>
                 <form ref={form} onSubmit={sendEmail}>
                     <div>
-                        <label>Full Name</label>
+                        <label>Full Name:</label>
+
+                    </div>
+                    <div>
                         <input type="text" name="user_name" placeholder="Enter your name" required />
                     </div>
                     <div>
-                        <label>Email Address</label>
+                        <label>Email Address:</label>
+                    </div>
+                    <div>
                         <input type="email" name="user_email" placeholder="Enter your email address" required />
                     </div>
                     <div>
-                        <label>Your Message</label>
+                        <label>Your Message:</label>
                         <textarea name="message" placeholder="Enter your message" required />
                     </div>
                     <button type="submit">Send Message!</button>
