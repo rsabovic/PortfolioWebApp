@@ -1,22 +1,44 @@
+/* Default/Global Theme (themeDesert) */
+:root {
+  --bg: AntiqueWhite;
+  --textColor: saddleBrown;
+  --boxColor: wheat;
+  --font: "VT323";
+  --linkClicked: maroon;
+  --onLink: chocolate;
+}
+
+/* Noir Theme */
+.themeNoir {
+  --bg: DimGrey;
+  --textColor: GhostWhite;
+  --boxColor: DarkGray;
+  --font: "Limelight";
+  --linkClicked: Grey;
+  --onLink: SlateGray;
+}
+
+/* Standarizing Global Variables */
 body {
-  background-color: AntiqueWhite;
-  color: saddlebrown;
+  background-color: var(--bg);
+  color: var(--textColor);
+  font-family: var(--font);
   display: flex;
-  font-family: "Pixelify Sans";
   font-size: 30px;
 }
 
-#root {
+body hr{
+  width: 100%;  
+  border-top: 5px solid #000;
+}
+
+#root, .appContainer {
   display: flex;
   flex: 1;
   width: 100%;
 }
 
-.appContainer {
-  display: flex;
-  width: 100%;
-}
-
+/* Content inside flex */
 .main {
   flex: 1;
   padding: 20px;
@@ -26,23 +48,69 @@ body {
   justify-content: center;
 }
 
-.landingDiv {
+/* Cards/Pop-Up Esque Design Boxes */
+.standardCard {
+  border: 10px solid black;
+  border-radius: 60px;
+  padding: 25px;
+  background-color: var(--boxColor);
+}
+
+.invisbleCard {
+  padding: 25px;
+}
+
+/* The Side Bar Directory */
+.directory {
+  justify-content: space-evenly;
+  width: 200px;
+  background: var(--boxColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  padding: 10px;
+  gap: 8px;
+}
+
+.directory a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--textColor);
+  padding: 8px;
+  font-size: 24px;
+}
+
+.directory a.active, a:hover {
+  color: var(--onLink);
+}
+
+.directory a i {
+  font-size: 20px;
+}
+
+/* Home Page Design */
+.homeDiv {
   width: 600px;
   display: flex;
   flex-direction: column;
 }
 
-.landingDiv h1 {
+.homeDiv h1 {
   font-size: 75px;
   margin: 0;
 }
 
-.landingDiv p {
+.homeDiv p {
   font-size: 25px;
   line-height: 0.9;
   margin: 0;
 }
 
+/* Experience Page Design */
 .experienceDiv {
   padding-top: 25px;
   width: 750px;
@@ -67,19 +135,25 @@ body {
   margin: 0;
 }
 
+
+
+.themeSwitcher {
+  font-family: var(--font);
+}
+
+.themeSwitcher button {
+  font-family: var(--font);
+  font-size: 20px;
+}
+
 .contactDiv {
   width: 600px;
-  border: 10px solid black;
-  border-radius: 8px;
-  padding: 25px;
-  background-color: wheat;
   display: flex;
   flex-direction: column;
 }
 
 .contactDiv textarea, input, button {
-  font-family: "Pixelify Sans";
-  background-color: antiquewhite;
+  background-color: var(--bg);
   border-radius: 8px;
 }
 
@@ -88,12 +162,29 @@ body {
   margin: 0;
 }
 
+.contactDiv input {
+  font-family: var(--font);
+  font-size: 20px;
+  padding: 12px 20px;
+  height: 5px;
+  width: 250px;
+}
+
+.contactDiv textarea {
+  font-family: var(--font);
+  font-size: 20px;
+  padding: 12px 20px;
+  height: 50px;
+  width: 500px;
+}
+
+.contactDiv button {
+  font-family: var(--font);
+  font-size: 20px;
+}
+
 .blogDiv {
   width: 1500px;
-  border: 10px solid black;
-  border-radius: 60px;
-  padding: 25px;
-  background-color: wheat;
 }
 
 .blogPostDiv {
@@ -102,7 +193,7 @@ body {
   border: 5px solid black;
   border-radius: 60px;
   padding: 25px;
-  background-color: wheat;
+  background-color: var(--boxColor);
   white-space: pre-wrap;
 }
 
@@ -115,44 +206,9 @@ body {
 }
 
 .blogPostDiv a{
-  color: saddlebrown;
+  color: var(--textColor);
 }
 
 .blogPostDiv a:visited {
-  color: maroon;
-}
-
-.directory {
-  justify-content: space-evenly;
-  width: 200px;
-  background: wheat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 95vh;
-  padding: 10px;
-  gap: 8px;
-}
-
-.directory a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  text-decoration: none;
-  color: saddlebrown;
-  padding: 8px;
-  font-size: 24px;
-}
-
-.directory a.active {
-  color: chocolate;
-}
-
-.directory a i {
-  font-size: 20px;
-}
-
-.directory a:hover {
-  color: chocolate;
+  color: var(--linkClicked);
 }

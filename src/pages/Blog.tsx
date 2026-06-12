@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 function Blog() {
     return (
         <div className="main">
-            <div className="blogDiv">
-                <h1>Blog Posts from the one and only!</h1>
+            <div className="blogDiv standardCard">
+                <h1>Blog Posts!</h1>
                 <p>
                     I just wanted to take one minute and thank you for taking the time to
-                    find me on my little corner of the internet. Below you will find the
-                    ramblings of a mad man, it may not be updated daily but it will have
+                    find me on my little corner of the internet. Below you will find my
+                    ramblings, it may not be updated daily but it will have
                     updates on some of the work I am doing as well as little tidbits of
                     knowledge I learned. Once again thank you, and I hope you enjoy!
                 </p>
