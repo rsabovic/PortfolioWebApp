@@ -1,15 +1,41 @@
 import { NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faArrowRightToBracket,
+  faHouseChimneyWindow,
+  faGraduationCap,
+  faCode,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faClipboard,
+  faAddressCard,
+  faNewspaper,
+} from '@fortawesome/free-regular-svg-icons'
 
 function Directory() {
   return (
     <aside className="directory">
-      <a href="https://authentik.sabovic.net"><i className="fa-solid fa-arrow-right-to-bracket"></i> Log In! </a>
-      <NavLink to="/"><i className="fa-solid fa-house-chimney-window"></i> Home!</NavLink>
-      <NavLink to="/experience"><i className="fa-regular fa-clipboard"></i> Experience!</NavLink>
-      <NavLink to="/education"><i className="fa-solid fa-graduation-cap"></i> Education!</NavLink>
-      <NavLink to="/projects"><i className="fa-solid fa-code"></i>Projects!</NavLink>
-      <NavLink to="/contactMe"><i className="fa-regular fa-address-card"></i> Contact Me!</NavLink>
-      <NavLink to="/blog"><i className="fa-regular fa-newspaper"></i> Blog!</NavLink>
+      <a href="https://authentik.sabovic.net">
+        <FontAwesomeIcon icon={faArrowRightToBracket} /> Log In!
+      </a>
+      <NavLink to="/">
+        <FontAwesomeIcon icon={faHouseChimneyWindow} /> Home!
+      </NavLink>
+      <NavLink to="/experience">
+        <FontAwesomeIcon icon={faClipboard} /> Experience!
+      </NavLink>
+      <NavLink to="/education">
+        <FontAwesomeIcon icon={faGraduationCap} /> Education!
+      </NavLink>
+      <NavLink to="/projects">
+        <FontAwesomeIcon icon={faCode} /> Projects!
+      </NavLink>
+      <NavLink to="/contactMe">
+        <FontAwesomeIcon icon={faAddressCard} /> Contact Me!
+      </NavLink>
+      <NavLink to="/blog">
+        <FontAwesomeIcon icon={faNewspaper} /> Blog!
+      </NavLink>
     </aside>
   )
 }
