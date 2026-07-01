@@ -43,7 +43,7 @@ h1,
 h2,
 h3,
 label,
-eduInfo {
+edu-info {
   font-family: var(--titleFont);
   margin: 0;
 }
@@ -155,7 +155,7 @@ a:hover {
   flex-direction: row;
 }
 
-.educationDiv eduInfo {
+.educationDiv edu-info {
   line-height: 0.8;
   margin-left: 1em;
   margin-bottom: 0;
