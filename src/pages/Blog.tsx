@@ -16,10 +16,10 @@ function Blog() {
             </div>
             {blogPosts.map((post) => (
                 <div className="blogPostDiv" key={post.id}>
-                <h1><Link to={`/blog/${post.id}`}>{post.title}</Link></h1>
-                <p>{post.summary}</p>
-                <p>{post.date}</p>
-            </div>
+                    <h1><Link to={`/blog/${post.id}`}>{post.title}</Link></h1>
+                    <p>{post.summary}</p>
+                    <p>{post.date}</p>
+                </div>
             ))}
         </div>
     )
