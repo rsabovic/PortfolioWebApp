@@ -1,44 +1,81 @@
-/* Default/Global Theme (themeDesert) */
+/* Default Theme (themeDesert) */
 :root {
   --bg: AntiqueWhite;
   --textColor: saddleBrown;
   --boxColor: wheat;
-  --font: "VT323";
+  --titleFont: "VT323";
+  --infoFont: "VT323";
   --linkClicked: maroon;
   --onLink: chocolate;
+  --h1Size: 75px;
+  --h2Size: 50px;
+  --h3Size: 35px;
 }
 
-/* Noir Theme */
+/* ================================ */
+/* =============THEMES============= */
+/* ================================ */
+/* Noir Theme (themeNoir) */
 .themeNoir {
   --bg: DimGrey;
   --textColor: GhostWhite;
   --boxColor: DarkGray;
-  --font: "Limelight";
+  --titleFont: "Limelight";
+  --infoFont: "Federo";
   --linkClicked: Grey;
   --onLink: SlateGray;
+  --h1Size: 60px;
+  --h2Size: 40px;
+  --h3Size: 25px;
 }
 
-/* Standarizing Global Variables */
+/* ================================ */
+/* =======STANDARDIZING TAGS======= */
+/* ================================ */
 body {
   background-color: var(--bg);
   color: var(--textColor);
-  font-family: var(--font);
   display: flex;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-body hr{
-  width: 100%;  
+h1,
+h2,
+h3,
+label,
+eduInfo {
+  font-family: var(--titleFont);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--h1Size);
+}
+
+h2 {
+  font-size: var(--h2Size);
+}
+
+h3 {
+  font-size: var(--h3Size);
+}
+
+p {
+  font-family: var(--infoFont);
+}
+
+body hr {
+  width: 100%;
   border-top: 5px solid #000;
 }
 
-#root, .appContainer {
+#root,
+.appContainer {
   display: flex;
   flex: 1;
   width: 100%;
 }
 
-/* Content inside flex */
 .main {
   flex: 1;
   padding: 20px;
@@ -48,7 +85,9 @@ body hr{
   justify-content: center;
 }
 
-/* Cards/Pop-Up Esque Design Boxes */
+/* ================================ */
+/* ==============CARDS============= */
+/* ================================ */
 .standardCard {
   border: 10px solid black;
   border-radius: 60px;
@@ -60,8 +99,11 @@ body hr{
   padding: 25px;
 }
 
-/* The Side Bar Directory */
+/* ================================ */
+/* =======SIDEBAR DIRECTORY======== */
+/* ================================ */
 .directory {
+  font-family: var(--titleFont);
   justify-content: space-evenly;
   width: 200px;
   background: var(--boxColor);
@@ -81,10 +123,10 @@ body hr{
   text-decoration: none;
   color: var(--textColor);
   padding: 8px;
-  font-size: 24px;
 }
 
-.directory a.active, a:hover {
+.directory a.active,
+a:hover {
   color: var(--onLink);
 }
 
@@ -93,25 +135,36 @@ body hr{
   height: 20px;
 }
 
-/* Home Page Design */
+/* ================================ */
+/* ============HOME PAGE=========== */
+/* ================================ */
 .homeDiv {
   width: 600px;
   display: flex;
   flex-direction: column;
 }
 
-.homeDiv h1 {
-  font-size: 75px;
-  margin: 0;
-}
-
 .homeDiv p {
-  font-size: 25px;
   line-height: 0.9;
   margin: 0;
 }
 
-/* Experience Page Design */
+.educationDiv {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+.educationDiv eduInfo {
+  line-height: 0.8;
+  margin-left: 1em;
+  margin-bottom: 0;
+  text-indent: -1em;
+}
+
+/* ================================ */
+/* ========EXPERIENCE INFO========= */
+/* ================================ */
 .experienceDiv {
   padding-top: 25px;
   width: 750px;
@@ -119,71 +172,72 @@ body hr{
   flex-direction: column;
 }
 
-.experienceDiv h1 {
-  font-size: 50px;
-  margin: 0;
-}
-
-.experienceDiv h2 {
-  font-size: 35px;
-  margin: 0;
-}
-
-.experienceDiv p,
-.experienceDiv a {
-  font-size: 25px;
+.experienceDiv p {
   line-height: 0.8;
-  margin: 0;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  text-indent: -1em;
 }
 
+.experienceDiv li {
+  line-height: 0.8;
+  margin-left: 1em;
+  text-indent: -1em;
+  margin-bottom: -25px;
+}
 
-
+/* ================================ */
+/* =========THEME SWITCHER========= */
+/* ================================ */
 .themeSwitcher {
-  font-family: var(--font);
+  font-family: var(--infoFont);
 }
 
-.themeSwitcher button {
-  font-family: var(--font);
-  font-size: 20px;
+.themeSwitcher select {
+  font-family: var(--infoFont);
 }
 
+/* ================================ */
+/* ========CONTACT ME PAGE========= */
+/* ================================ */
 .contactDiv {
   width: 600px;
   display: flex;
   flex-direction: column;
 }
 
-.contactDiv textarea, input, button {
+.contactDiv textarea,
+input,
+button {
   background-color: var(--bg);
   border-radius: 8px;
 }
 
-.contactDiv h1 {
-  font-size: 75px;
-  margin: 0;
-}
-
 .contactDiv input {
-  font-family: var(--font);
-  font-size: 20px;
+  font-family: var(--infoFont);
   padding: 12px 20px;
   height: 5px;
   width: 250px;
+  font-size: 20px;
 }
 
 .contactDiv textarea {
-  font-family: var(--font);
-  font-size: 20px;
+  font-family: var(--infoFont);
   padding: 12px 20px;
   height: 50px;
   width: 500px;
+  font-size: 25px;
 }
 
 .contactDiv button {
-  font-family: var(--font);
+  font-family: var(--titleFont);
   font-size: 20px;
 }
 
+
+/* ================================ */
+/* ===========BLOG PAGE============ */
+/* ================================ */
 .blogDiv {
   width: 1500px;
 }
@@ -198,15 +252,7 @@ body hr{
   white-space: pre-wrap;
 }
 
-.blogPostDiv h1 {
-  font-size: 50px;
-}
-
-.blogPostDiv p {
-  font-size: 25px;
-}
-
-.blogPostDiv a{
+.blogPostDiv a {
   color: var(--textColor);
 }
 

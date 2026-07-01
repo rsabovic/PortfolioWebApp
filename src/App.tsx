@@ -6,7 +6,6 @@ import Projects from './pages/Projects'
 import ContactMe from './pages/ContactMe'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
-import LogIn from './pages/LogIn'
 import Directory from './components/Directory'
 import ThemeSwitcher from './components/ThemeSwitcher'
 
@@ -14,11 +13,10 @@ function App() {
   return (
     <BrowserRouter>
 
-        <ThemeSwitcher />  {/* ← now it's available everywhere */}
+        <ThemeSwitcher />  {}
         <div style={{ display: 'flex', width: '100%' }}>
 
         <Routes>
-          <Route path="/logIn" element={<LogIn />} />
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/education" element={<Education />} />
