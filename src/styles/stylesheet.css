@@ -10,6 +10,7 @@
   --h1Size: 75px;
   --h2Size: 50px;
   --h3Size: 35px;
+  --h4Size: 25px;
 }
 
 /* ================================ */
@@ -27,6 +28,7 @@
   --h1Size: 60px;
   --h2Size: 40px;
   --h3Size: 25px;
+  --h4Size: 20px;
 }
 
 /* ================================ */
@@ -42,6 +44,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 label,
 edu-info {
   font-family: var(--titleFont);
@@ -58,6 +61,10 @@ h2 {
 
 h3 {
   font-size: var(--h3Size);
+}
+
+h4 {
+  font-size: var(--h4Size);
 }
 
 p {
@@ -83,6 +90,27 @@ body hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.verticalTimeline {
+  font-family: var(--infoFont);
+}
+
+.verticalTimeline p {
+  font-size: var(--h4Size) !important;
+}
+
+.vertical-timeline-element-date {
+  font-size: var(--h3Size) !important;
+  /*margin-top: -25px;*/
+  line-height: 0;
+}
+
+.vertical-timeline-element-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  align-items: center;
+  object-fit: contain;
 }
 
 /* ================================ */

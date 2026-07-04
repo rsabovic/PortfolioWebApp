@@ -1,3 +1,6 @@
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
 function Experience() {
   return (
     <div className="main">
@@ -6,48 +9,76 @@ function Experience() {
         <h3>4+ years of professional engineering experience</h3>
       </div>
 
-      <div className="invisibleCard">
-        <div className="experienceDiv">
-          <h3>February 2022 - February 2026</h3>
-          <h3>Software Engineer @ Dynatron Software</h3>
-          <p>Primarily focused on creating and maintaing ETL Pipelines that were integrated with RESTful APIs.</p>
-          <p>Implemented front end changes to support new back end user features.</p>
-          <p>Automate manual data audits using Python.</p>
-        </div>
-        <hr></hr>
-        <div className="experienceDiv">
-          <h3>February 2021 - February 2022</h3>
-          <h3>Warehouse Operations Associate @ iHerb</h3>
-          <p>Fulfilled logistics behind receiving, processing, and storing inventory.</p>
-        </div>
-        <hr></hr>
-        <div className="experienceDiv">
-          <h3>August 2019 - February 2021</h3>
-          <h3>Sales Associate @ Walmart</h3>
-          <p>Ensured merchandise was stocked and aisles were neat as well as assisting customers as needed.</p>
-        </div>
-        <hr></hr>
-        <div className="experienceDiv">
-          <h3>December 2018 - August 2019</h3>
-          <h3>Cashier @ Shoprite</h3>
-          <p>Worked on registers as well as supervising self checkout.</p>
-        </div>
-        <hr></hr>
-      </div>
+      <VerticalTimeline
+        lineColor={'var(--textColor)'}>
+
+        <VerticalTimelineElement
+          className="verticalTimeline"
+          contentStyle={{ background: 'var(--boxColor)' }}
+          contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
+          dateClassName="verticalTimeline"
+          date="February 2022 - February 2026"
+          iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
+          icon={<img src="/logos/dynatron-favicon.png" alt="Dynatron" />}
+        >
+          <h3>Dynatron Software</h3>
+          <h3>Software Engineer</h3>
+          <p>ETL Engineering, API Integrations, Automating Testing, Auditing and Cleaning Data, Support Triage</p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="verticalTimeline"
+          contentStyle={{ background: 'var(--boxColor)' }}
+          contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
+          date="February 2021 - February 2022  "
+          iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
+          icon={<img src="/logos/iherb-favicon.png" alt="iHerb" />}
+        >
+          <h3>iHerb</h3>
+          <h3>Warehouse Operations Associate</h3>
+          <p>Picking, Packing, Shipping, Taping</p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="verticalTimeline"
+          contentStyle={{ background: 'var(--boxColor)' }}
+          contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
+          date="August 2019 - February 2021"
+          iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
+          icon={<img src="/logos/walmart-favicon.png" alt="WalMart" />}
+        >
+          <h3>Walmart</h3>
+          <h3>Sales Associate</h3>
+          <p>Zoning, Stocking, Inventory Management, Customer Service</p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="verticalTimeline"
+          contentStyle={{ background: 'var(--boxColor)' }}
+          contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
+          date="December 2018 - August 2019"
+          iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
+          icon={<img src="/logos/shoprite-favicon.png" alt="ShopRite" />}
+        >
+          <h3>Shoprite</h3>
+          <h3>Cashier</h3>
+          <p>Cashier, Self Checkout, Customer Service, Front End Management</p>
+        </VerticalTimelineElement>
+      </VerticalTimeline>
 
       <div className="experienceDiv standardCard">
         <h2>Technology Stack</h2>
         <hr></hr>
         <h3>Front End:</h3>
-        <p>HTML, CSS, JavaScript</p>
+        <h4>JavaScript/TypeScript, HTML, CSS</h4>
         <h3>Back End:</h3>
-        <p>PHP, Python, SQL</p>
+        <h4>PHP, Python, T-SQL</h4>
         <h3>Frameworks/Libraries:</h3>
-        <p>React, Laravel, FastAPI</p>
+        <h4>React, Laravel, FastAPI</h4>
         <h3>Databases:</h3>
-        <p>Snowflake, MySQL, Microsoft SQL Server, PostgreSQL</p>
+        <h4>Snowflake, MySQL, Microsoft SQL Server, PostgreSQL</h4>
         <h3>Tools:</h3>
-        <p>Docker, Node.js, Git, Linux </p>
+        <h4>Docker, Node.js, Git, Linux </h4>
       </div>
 
     </div>
