@@ -6,16 +6,13 @@ import Projects from './pages/Projects'
 import ContactMe from './pages/ContactMe'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import Themes from './pages/Themes'
 import Directory from './components/Directory'
-import ThemeSwitcher from './components/ThemeSwitcher'
 
 function App() {
   return (
     <BrowserRouter>
-
-        <ThemeSwitcher />  {}
         <div style={{ display: 'flex', width: '100%' }}>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
@@ -24,6 +21,7 @@ function App() {
           <Route path="/contactMe" element={<ContactMe />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/themes" element={<Themes />} />
         </Routes>
         <Directory />
       </div>

@@ -16,8 +16,23 @@
 /* ================================ */
 /* =============THEMES============= */
 /* ================================ */
-/* Noir Theme (themeNoir) */
-.themeNoir {
+/* Desert Theme */
+.themesDesert {
+  --bg: AntiqueWhite;
+  --textColor: saddleBrown;
+  --boxColor: wheat;
+  --titleFont: "VT323";
+  --infoFont: "VT323";
+  --linkClicked: maroon;
+  --onLink: chocolate;
+  --h1Size: 75px;
+  --h2Size: 50px;
+  --h3Size: 35px;
+  --h4Size: 25px;
+}
+
+/* Noir Theme */
+.themesNoir {
   --bg: DimGrey;
   --textColor: GhostWhite;
   --boxColor: DarkGray;
@@ -290,4 +305,18 @@ button {
 
 .blogPostDiv a:visited {
   color: var(--linkClicked);
+}
+
+
+/* ================================ */
+/* ==========THEMES PAGE=========== */
+/* ================================ */
+.themeCard {
+  padding: 25px;
+  width: 99%;
+}
+
+.themeCard h1, 
+.themeCard p {
+  font-family:inherit;
 }
