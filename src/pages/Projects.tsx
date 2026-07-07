@@ -48,6 +48,7 @@ function Projects() {
         <li><p>Create a mock program using an Arduino to sketch up a rough draft of how this would look.</p></li>
         <li><p>Implement 3D Printing to create custom touches to my pinball machine.</p></li>
       </div>
+      <div className="invisbleCard"></div>
     </div>
   )
 }
