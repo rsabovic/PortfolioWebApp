@@ -39,6 +39,7 @@ body {
   color: var(--textColor);
   display: flex;
   font-size: 25px;
+  margin: 0px;
 }
 
 h1,
@@ -131,16 +132,19 @@ body hr {
 /* =======SIDEBAR DIRECTORY======== */
 /* ================================ */
 .directory {
+  top: 0px;
+  position: sticky;
   font-family: var(--titleFont);
   justify-content: space-evenly;
-  width: 200px;
+  width: 225px;
   background: var(--boxColor);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 95vh;
-  padding: 10px;
+  height: 100vh;
+  
   gap: 8px;
+  
 }
 
 .directory a {
