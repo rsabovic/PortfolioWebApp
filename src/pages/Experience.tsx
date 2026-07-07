@@ -1,5 +1,9 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import dynatronfavicon from '../assets/logos/dynatron-favicon.png';
+import iherbfavicon from '../assets/logos/iherb-favicon.png';
+import shopritefavicon from '../assets/logos/shoprite-favicon.png';
+import walmartfavicon from '../assets/logos/walmart-favicon.png';
 
 function Experience() {
   return (
@@ -19,7 +23,7 @@ function Experience() {
           dateClassName="verticalTimeline"
           date="February 2022 - February 2026"
           iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
-          icon={<img src="/logos/dynatron-favicon.png" alt="Dynatron" />}
+          icon={<img src={ dynatronfavicon } alt="Dynatron" />}
         >
           <h3>Dynatron Software</h3>
           <h3>Software Engineer</h3>
@@ -32,7 +36,7 @@ function Experience() {
           contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
           date="February 2021 - February 2022  "
           iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
-          icon={<img src="/logos/iherb-favicon.png" alt="iHerb" />}
+          icon={<img src={ iherbfavicon } alt="iHerb" />}
         >
           <h3>iHerb</h3>
           <h3>Warehouse Operations Associate</h3>
@@ -45,7 +49,7 @@ function Experience() {
           contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
           date="August 2019 - February 2021"
           iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
-          icon={<img src="/logos/walmart-favicon.png" alt="WalMart" />}
+          icon={<img src={ walmartfavicon } alt="WalMart" />}
         >
           <h3>Walmart</h3>
           <h3>Sales Associate</h3>
@@ -58,7 +62,7 @@ function Experience() {
           contentArrowStyle={{ borderRight: '20px solid  var(--boxColor)' }}
           date="December 2018 - August 2019"
           iconStyle={{ background: 'var(--bg)', color: 'var(--textColor)' }}
-          icon={<img src="/logos/shoprite-favicon.png" alt="ShopRite" />}
+          icon={<img src={ shopritefavicon } alt="ShopRite" />}
         >
           <h3>Shoprite</h3>
           <h3>Cashier</h3>

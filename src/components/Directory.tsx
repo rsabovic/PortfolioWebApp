@@ -5,6 +5,7 @@ import {
   faHouseChimneyWindow,
   faGraduationCap,
   faCode,
+  faPalette,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faClipboard,
@@ -35,6 +36,9 @@ function Directory() {
       </NavLink>
       <NavLink to="/blog">
         <FontAwesomeIcon icon={faNewspaper} /> Blog!
+      </NavLink>
+      <NavLink to="/themes">
+        <FontAwesomeIcon icon={faPalette} /> Themes!
       </NavLink>
     </aside>
   )
