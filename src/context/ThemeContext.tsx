@@ -3,7 +3,7 @@ import { createContext, useContext, useState, type ReactNode, useEffect } from '
 const ThemeContext = createContext<any>(null)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState('themeDesert')
+  const [theme, setTheme] = useState('themesDesert')
 
   useEffect(() => {
     document.documentElement.className = theme
