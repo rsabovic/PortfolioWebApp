@@ -1,18 +1,3 @@
-/* Default Theme (themeDesert) */
-:root {
-  --bg: AntiqueWhite;
-  --textColor: saddleBrown;
-  --boxColor: wheat;
-  --titleFont: "VT323";
-  --infoFont: "VT323";
-  --linkClicked: maroon;
-  --onLink: chocolate;
-  --h1Size: 75px;
-  --h2Size: 50px;
-  --h3Size: 35px;
-  --h4Size: 25px;
-}
-
 /* ================================ */
 /* =============THEMES============= */
 /* ================================ */
