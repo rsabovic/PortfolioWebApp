@@ -4,8 +4,6 @@ import Experience from './pages/Experience'
 import Education from './pages/Education'
 import Projects from './pages/Projects'
 import ContactMe from './pages/ContactMe'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
 import Themes from './pages/Themes'
 import Directory from './components/Directory'
 
@@ -19,8 +17,6 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contactMe" element={<ContactMe />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/themes" element={<Themes />} />
         </Routes>
         <Directory />

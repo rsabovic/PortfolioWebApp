@@ -10,7 +10,6 @@ import {
 import {
   faClipboard,
   faAddressCard,
-  faNewspaper,
 } from '@fortawesome/free-regular-svg-icons'
 
 function Directory() {
@@ -33,9 +32,6 @@ function Directory() {
       </NavLink>
       <NavLink to="/contactMe">
         <FontAwesomeIcon icon={faAddressCard} /> Contact Me!
-      </NavLink>
-      <NavLink to="/blog">
-        <FontAwesomeIcon icon={faNewspaper} /> Blog!
       </NavLink>
       <NavLink to="/themes">
         <FontAwesomeIcon icon={faPalette} /> Themes!
