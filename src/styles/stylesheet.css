@@ -10,10 +10,10 @@
   --infoFont: "VT323";
   --linkClicked: maroon;
   --onLink: chocolate;
-  --h1Size: 75px;
-  --h2Size: 50px;
-  --h3Size: 35px;
-  --h4Size: 25px;
+  --h1Size: 40px;
+  --h2Size: 30px;
+  --h3Size: 22px;
+  --h4Size: 18px;
 }
 
 /* Noir Theme */
@@ -25,21 +25,27 @@
   --infoFont: "Federo";
   --linkClicked: Grey;
   --onLink: SlateGray;
-  --h1Size: 60px;
-  --h2Size: 40px;
-  --h3Size: 25px;
-  --h4Size: 20px;
+  --h1Size: 34px;
+  --h2Size: 26px;
+  --h3Size: 20px;
+  --h4Size: 16px;
 }
 
 /* ================================ */
-/* =======STANDARDIZING TAGS======= */
+/* ===== Mobile UI (Default) ====== */
 /* ================================ */
+html {
+  min-height: 100dvh; 
+}
+
 body {
   background-color: var(--bg);
   color: var(--textColor);
   display: flex;
-  font-size: 25px;
+  flex-direction: column; 
+  font-size: 18px;
   margin: 0px;
+  min-height: 100dvh; 
 }
 
 h1,
@@ -73,24 +79,28 @@ p {
 }
 
 body hr {
-  width: 100%;
   border-top: 5px solid #000;
+  width: 100%;
 }
 
 #root,
 .appContainer {
   display: flex;
   flex: 1;
+  flex-direction: column;
+  min-height: 100dvh;
   width: 100%;
 }
 
 .main {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   justify-content: center;
+  padding: 16px;  
+  width: 100%;
 }
 
 .verticalTimeline {
@@ -103,123 +113,153 @@ body hr {
 
 .vertical-timeline-element-date {
   font-size: var(--h3Size) !important;
-  /*margin-top: -25px;*/
-  line-height: 0;
+  line-height: 1.2;
 }
 
 .vertical-timeline-element-icon img {
-  width: 100% !important;
-  height: 100% !important;
   align-items: center;
+  height: 100% !important;
   object-fit: contain;
+  width: 100% !important;
 }
 
 /* ================================ */
-/* ==============CARDS============= */
+/* ============ CARDS ============= */
 /* ================================ */
 .standardCard {
-  border: 10px solid black;
-  border-radius: 60px;
-  padding: 25px;
   background-color: var(--boxColor);
+  border: 6px solid black;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
 }
 
 .invisbleCard {
-  padding: 25px;
+  padding: 16px;
 }
 
 /* ================================ */
-/* =======SIDEBAR DIRECTORY======== */
+/* ====== SIDEBAR DIRECTORY ======= */
 /* ================================ */
 .directory {
-  top: 0px;
-  position: sticky;
-  font-family: var(--titleFont);
-  justify-content: space-evenly;
-  width: 225px;
   background: var(--boxColor);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  
-  gap: 8px;
+  font-family: var(--titleFont);
+  order: -1; 
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
   
 }
 
-.directory a {
-  display: flex;
-  flex-direction: column;
+.directoryToggle {
   align-items: center;
-  gap: 4px;
-  text-decoration: none;
+  background: none;
+  border: none;
   color: var(--textColor);
-  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--titleFont);
+  font-size: 22px;
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
 }
 
-.directory a.active,
+.directoryLinks {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.directoryLinks.open {
+  max-height: 500px; 
+}
+
+.directoryLinks a {
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--textColor);
+  display: flex;
+  flex-direction: row; 
+  font-size: 16px;
+  gap: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.directoryLinks a.active,
 a:hover {
   color: var(--onLink);
 }
 
-.directory a svg {
-  width: 20px;
-  height: 20px;
+.directoryLinks a svg {
+  height: 18px;
+  width: 18px;
 }
 
 /* ================================ */
-/* ============HOME PAGE=========== */
+/* ========== HOME PAGE =========== */
 /* ================================ */
 .homeDiv {
-  width: 600px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  padding: 0 16px;
+  width: 100%;
 }
 
 .homeDiv p {
-  line-height: 0.9;
+  line-height: 1.1;
   margin: 0;
 }
 
 .educationDiv {
   display: flex;
-  flex-direction: column;
-  flex-direction: row;
+  flex-direction: column; 
 }
 
 .educationDiv edu-info {
-  line-height: 0.8;
+  line-height: 1.1;
   margin-left: 1em;
   margin-bottom: 0;
   text-indent: -1em;
 }
 
 /* ================================ */
-/* ========EXPERIENCE INFO========= */
+/* ======= EXPERIENCE INFO ======== */
 /* ================================ */
 .experienceDiv {
-  padding-top: 25px;
-  width: 750px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  max-width: 750px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  width: 100%;
 }
 
 .experienceDiv p {
-  line-height: 0.8;
-  margin-left: 1em;
+  line-height: 1.1;
   margin-bottom: 0.5em;
+  margin-left: 1em;
   text-indent: -1em;
 }
 
 .experienceDiv li {
-  line-height: 0.8;
+  line-height: 1.1;
+  margin-bottom: -10px;
   margin-left: 1em;
   text-indent: -1em;
-  margin-bottom: -25px;
 }
 
 /* ================================ */
-/* =========THEME SWITCHER========= */
+/* ======== THEME SWITCHER ======== */
 /* ================================ */
 .themeSwitcher {
   font-family: var(--infoFont);
@@ -227,15 +267,19 @@ a:hover {
 
 .themeSwitcher select {
   font-family: var(--infoFont);
+  max-width: 100%;
 }
 
 /* ================================ */
-/* ========CONTACT ME PAGE========= */
+/* ======= CONTACT ME PAGE ======== */
 /* ================================ */
 .contactDiv {
-  width: 600px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  padding: 0 16px;
+  width: 100%;
 }
 
 .contactDiv textarea,
@@ -246,42 +290,51 @@ button {
 }
 
 .contactDiv input {
+  box-sizing: border-box;
   font-family: var(--infoFont);
+  font-size: 16px;
+  height: 20px;
+  max-width: 250px;
   padding: 12px 20px;
-  height: 5px;
-  width: 250px;
-  font-size: 20px;
+  width: 100%;
 }
 
 .contactDiv textarea {
+  box-sizing: border-box;
   font-family: var(--infoFont);
+  font-size: 18px;
+  height: 80px;
   padding: 12px 20px;
-  height: 50px;
-  width: 500px;
-  font-size: 25px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .contactDiv button {
   font-family: var(--titleFont);
-  font-size: 20px;
+  font-size: 18px;
+  padding: 10px;
 }
 
-
 /* ================================ */
-/* ===========BLOG PAGE============ */
+/* ========== BLOG PAGE =========== */
 /* ================================ */
 .blogDiv {
-  width: 1500px;
+  box-sizing: border-box;
+  max-width: 1500px;
+  padding: 0 16px;
+  width: 100%;
 }
 
 .blogPostDiv {
-  margin-top: 30px;
-  width: 1300px;
-  border: 5px solid black;
-  border-radius: 60px;
-  padding: 25px;
   background-color: var(--boxColor);
+  box-sizing: border-box;
+  border: 4px solid black;
+  border-radius: 30px;
+  max-width: 1300px;
+  margin-top: 20px;
+  padding: 16px;
   white-space: pre-wrap;
+  width: 100%;
 }
 
 .blogPostDiv a {
@@ -292,16 +345,170 @@ button {
   color: var(--linkClicked);
 }
 
-
 /* ================================ */
-/* ==========THEMES PAGE=========== */
+/* ========= THEMES PAGE ========== */
 /* ================================ */
 .themeCard {
-  padding: 25px;
+  padding: 16px;
   width: 99%;
 }
 
-.themeCard h1, 
+.themeCard h1,
 .themeCard p {
-  font-family:inherit;
+  font-family: inherit;
+}
+
+
+
+/* ================================ */
+/* ============ TABLET ============ */
+/* ================================ */
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  .contactDiv input {
+    height: 5px;
+  }
+}
+
+
+
+/* ================================ */
+/* =========== DESKTOP ============ */
+/* ================================ */
+@media (min-width: 1024px) {
+  .themesDesert {
+    --h1Size: 75px;
+    --h2Size: 50px;
+    --h3Size: 35px;
+    --h4Size: 25px;
+  }
+
+  .themesNoir {
+    --h1Size: 60px;
+    --h2Size: 40px;
+    --h3Size: 25px;
+    --h4Size: 20px;
+  }
+
+  body {
+    flex-direction: row;
+    font-size: 25px;
+  }
+
+  #root,
+  .appContainer {
+    flex-direction: row;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .standardCard {
+    border: 10px solid black;
+    border-radius: 60px;
+    padding: 25px;
+  }
+
+  .invisbleCard {
+    padding: 25px;
+  }
+
+  .directory {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    order: 0; 
+    width: 225px;
+  }
+
+  .directoryToggle {
+    display: none; 
+  }
+
+  .directoryLinks {
+    flex: 1;
+    justify-content: space-evenly;
+    max-height: none; 
+    overflow: visible;
+  }
+
+  .directoryLinks a {
+    border-top: none;
+    flex-direction: column; 
+    font-size: inherit;
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .directoryLinks a svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  .homeDiv {
+    width: 600px;
+  }
+
+  .homeDiv p {
+    line-height: 0.9;
+  }
+
+  .educationDiv {
+    flex-direction: row;
+  }
+
+  .educationDiv edu-info {
+    line-height: 0.8;
+  }
+
+  .experienceDiv {
+    padding-top: 25px;
+    width: 750px;
+  }
+
+  .experienceDiv p {
+    line-height: 0.8;
+  }
+
+  .experienceDiv li {
+    line-height: 0.8;
+    margin-bottom: -25px;
+  }
+
+  .contactDiv input {
+    font-size: 20px;
+    height: 5px;
+    width: 250px;
+  }
+
+  .contactDiv textarea {
+    font-size: 25px;
+    height: 50px;
+    width: 500px;
+  }
+
+  .contactDiv button {
+    font-size: 20px;
+  }
+
+  .blogDiv {
+    width: 1500px;
+  }
+
+  .blogPostDiv {
+    border: 5px solid black;
+    border-radius: 60px;
+    margin-top: 30px;
+    padding: 25px;
+    width: 1300px;
+  }
+
+  .themeCard {
+    padding: 25px;
+  }
 }

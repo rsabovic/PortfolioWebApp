@@ -10,7 +10,7 @@ import Directory from './components/Directory'
 function App() {
   return (
     <BrowserRouter>
-        <div style={{ display: 'flex', width: '100%' }}>
+        <div className="appContainer">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
